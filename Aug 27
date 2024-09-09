@@ -1,0 +1,107 @@
+// 1 st Answer
+package New;
+import java.util.*;
+public class ArrayMatrixSum
+{
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the numbers of rows and columns : ");
+	int r=sc.nextInt();
+	int c=sc.nextInt();
+	int[][] arr1=new int[r][c]; 
+	int[][] arr2=new int[r][c];
+	int[][] result=new int[r][c]; 
+	
+	System.out.println("Enter the elements of arr1 : ");
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			arr1[i][j]=sc.nextInt();
+		}
+	}
+	
+	System.out.println("Enter the elements of arr2 : ");
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			arr2[i][j]=sc.nextInt();
+		}
+	}
+	sc.close();
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			System.out.print(arr1[i][j]+" ");
+		}
+		System.out.println();
+	}
+	System.out.println();
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			System.out.print(arr2[i][j]+" ");
+		}
+		System.out.println();
+	}
+	
+	System.out.println("Sum of two Matrix : ");
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			result[i][j]=arr1[i][j]+arr2[i][j];
+			System.out.print(result[i][j]+" ");
+		}
+		System.out.println();
+	}
+	
+}
+}
+
+// 2 nd Answer
+package New;
+import java.util.*;
+public class ArrayMatrixSub
+{
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the numbers of rows and columns : ");
+	int r=sc.nextInt();
+	int c=sc.nextInt();
+	int[][] arr1=new int[r][c]; 
+	int[][] arr2=new int[r][c];
+	int[][] result=new int[r][c]; 
+	
+	System.out.println("Enter the elements of Matrix1 : ");
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			arr1[i][j]=sc.nextInt();
+		}
+	}
+	
+	System.out.println("Enter the elements of Matrix2 : ");
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			arr2[i][j]=sc.nextInt();
+		}
+	}
+	sc.close();
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			System.out.print(arr1[i][j]+" ");
+		}
+		System.out.println();
+	}
+	System.out.println();
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			System.out.print(arr2[i][j]+" ");
+		}
+		System.out.println();
+	}
+	
+	System.out.println("Subtraction of two Matrix : ");
+	for(int i=0;i<r;i++) {
+		for(int j=0;j<c;j++) {
+			result[i][j]=arr1[i][j]-arr2[i][j];
+			System.out.print(result[i][j]+" ");
+		}
+		System.out.println();
+	}
+	
+}
+}
