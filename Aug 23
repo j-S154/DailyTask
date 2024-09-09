@@ -1,0 +1,55 @@
+// 1 st Answer
+package New;
+import java.util.Scanner;
+public class ArrayReturnSum {
+	static int[] sum(int a,int b) {
+		int[] array=new int[3];
+		array[0]=a;
+		array[1]=b;
+		array[2]=a+b;
+		return array;
+	}
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of a and b : ");
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int arr[]=sum(a,b);
+	 int j=0;
+	for(int i:arr) {
+	  System.out.println("array index of "+j+" : "+i);
+	  j++;
+	}
+	sc.close();
+}
+}
+
+// 2 nd Answer
+package New;
+
+class New2 {
+public String name;
+public int id;
+public int age;
+New2(String name,int id,int age){
+	this.name=name;
+	this.id=id;
+	this.age=age;
+}
+public String toString() 
+{
+	return "Employee Name :"+name + "  ID :"+id+"  Age :" +age;
+}
+}
+
+public class ArrayOfObject1{
+public static void main(String[] args) {
+	New2[] mystd=new New2[] {new New2("Suriya",3,28),new New2("Vijay",5,40)};
+	
+	for(New2 m:mystd)  
+	{
+		System.out.println(m);
+	}
+}
+}
+
