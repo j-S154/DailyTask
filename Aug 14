@@ -1,0 +1,26 @@
+//1 st Question
+package New;
+
+public class WrapConvert {
+public static void main(String[] args) {
+	int a=5;
+	boolean b=true;
+	Integer intObj=a;
+	Boolean boolObj=b;
+	System.out.println("Integer Objects : "+intObj);
+	System.out.println("Boolean Objects : "+boolObj);
+}
+}
+
+//2 nd Question
+package New;
+
+public class WrapConvert1 {
+public static void main(String[] args) {
+Character charObj='c';
+System.out.println("character Object : "+charObj);
+//unboxing
+char a=charObj;
+System.out.println("Unboxing : "+a);
+}
+}
