@@ -1,0 +1,29 @@
+// 1 st Answer
+//1 st Question
+let arr=[3,6,7,4,8];
+let newValue=2;
+arr[arr.length]=newValue;
+console.log("Adding an element into an array at last without using push operation",arr);
+
+//2 nd Question
+let arr1=[1,2,3,4,5,6];
+arr1.length=arr1.length-1;
+console.log("Remove an element from an array at last without using pop operation",arr1);
+
+//3 rd Question
+let arr2=['first','second','third','four'];
+console.log("adding special characters between two elements",arr2.join('@'));
+
+//4 rth Question
+// Array of employee objects
+let employees = [
+    { EMPID: 1, EMPNAME: "Aakash", EMPSALARY: 50000, EMPDESIGNATION: "Software Engineer" },
+    { EMPID: 2, EMPNAME: "Dinesh", EMPSALARY: 60000, EMPDESIGNATION: "Project Manager" },
+    { EMPID: 3, EMPNAME: "Ajay", EMPSALARY: 55000, EMPDESIGNATION: "Data Analyst" },
+    { EMPID: 4, EMPNAME: "Niranjan", EMPSALARY: 65000, EMPDESIGNATION: "DevOps Engineer" },
+    { EMPID: 5, EMPNAME: "Aadhi", EMPSALARY: 62000, EMPDESIGNATION: "HR" }
+];
+
+employees.slice(0,3).forEach(emp=>{
+    console.log(emp);
+});
