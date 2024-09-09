@@ -1,0 +1,75 @@
+// 1 st Answer
+package New;
+
+import java.util.Scanner;
+
+public class OddNumbers {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a number :");
+	int n=sc.nextInt();
+	int sum=0;
+	for(int i=1;i<=n;i++) {
+		if(i%2!=0) {
+	    sum+=i;
+		}
+	}
+	System.out.println("Sum of Odd Number :"+sum);
+}
+}
+
+// 2 nd Answer
+package New;
+import java.util.Scanner;
+
+public class SumEvenNum {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a number :");
+	int n=sc.nextInt();
+	int sum=0;
+	for(int i=1;i<=n;i++) {
+		if(i%2==0) {
+	    sum+=i;
+		}
+	}
+	System.out.println("Sum of Even Numbers :"+sum);
+}
+}
+
+
+// 3 rd Answer
+package New;
+import java.util.*;
+public class RevNum {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number :");
+	int n=sc.nextInt();
+	int rem,rev=0;
+	sc.close();
+	while(n!=0) {
+		rem=n%10;
+		rev=rev*10+rem;
+		n=n/10;
+	}
+   System.out.println("Reverse of Number :"+rev);
+}
+}
+
+//4 th Answer
+package New;
+import java.util.*;
+public class RevAlphabet {
+public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the alphabets :");
+char n=sc.next().charAt(0);
+System.out.println();
+sc.close();
+System.out.println("Reverse of Alphabets :");
+for(char i=n;i>='A';i--) {
+	System.out.println(i);
+}
+}
+}
