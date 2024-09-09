@@ -1,0 +1,57 @@
+//1 st Question
+package New;
+import java.util.Scanner;
+public class Switch1 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the first value of a : ");
+	int a=sc.nextInt();
+	System.out.println("Enter the Second value of b : ");
+	int b=sc.nextInt();
+	System.out.println("Give the Opertion symbol : ");
+	char op=sc.next().charAt(0);
+	int c;
+	switch(op) {
+	case '+':
+		c=a+b;
+		System.out.println("Addition : "+c);
+		break;
+	case '-':
+		c=a-b;
+		System.out.println("Subtraction : "+c);
+		break;
+	case '*':
+		c=a*b;
+		System.out.println("Multiplication : "+c);
+		break;
+	case '/':
+		c=a/b;
+		System.out.println("Division : "+c);
+        break;
+	default:
+		System.out.println("please Enter valid symbol : ");
+	}
+	}
+
+}
+
+//2 nd Question
+package New;
+import java.util.Scanner;
+public class OddEven {
+public static void main(String[] args) {
+	int n=50;
+	System.out.println("Odd Numbers are:");
+	for(int i=1;i<n;i++) {
+		if(i%2!=0) {
+			System.out.println("Odd Number : "+i);
+		}
+	}
+	System.out.println("Even Numbers are:");
+	for(int i=1;i<n;i++) {
+		if(i%2==0) {
+			System.out.println("Even Number : "+i);
+		}
+	}
+}
+}
