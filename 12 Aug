@@ -1,0 +1,49 @@
+//1 st Question
+package New;
+
+public class Local12 {
+void addition() {
+	int a=3;
+	int b=4;
+    int c=a+b;
+	System.out.println("Addition : "+c);
+}
+
+public static void main(String[] args) {
+	Local12 ob=new Local12();
+	ob.addition();
+}
+}
+//2 nd Question
+package New;
+
+public class Instance12 {
+int EmpId;
+String EmpName;
+String role;
+Double EmpSalary;
+String city;
+Instance12(int id,String name,String type){
+	EmpId=id;
+	EmpName=name;
+	role=type;
+}
+public void setDetails(double salary,String current) {
+	EmpSalary=salary;
+	city=current;
+}
+public void display() {
+	System.out.println("Employee Id : "+EmpId);
+	System.out.println("Employee Name : "+EmpName);
+	System.out.println("Employee role : "+role);
+	System.out.println("Employee Salary : "+EmpSalary);
+	System.out.println("Employee City : "+city);
+
+}
+public static void main(String[] args) {
+	Instance12 ob=new Instance12(3,"Akash","Associate");
+	ob.setDetails(5000,"Chennai");
+	ob.display();
+}
+}
+
