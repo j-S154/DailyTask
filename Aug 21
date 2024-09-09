@@ -1,0 +1,78 @@
+// 1 st Answer
+package New;
+
+import java.util.Scanner;
+
+public class OddEvenArray {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter length : ");
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+	System.out.println("Enter Elements : ");
+	for(int i=0;i<n;i++) {
+		arr[i]=sc.nextInt();
+	}
+	System.out.println("Even Numbers :");
+	for(int i=0;i<n;i++) {
+		if(arr[i]%2==0) {
+		System.out.print(arr[i]+" ");
+		}
+	}
+	System.out.println("");
+	System.out.println("Odd Numbers :");
+	for(int i=0;i<n;i++) {
+		if(arr[i]%2!=0) {
+		System.out.print(arr[i]+" ");
+		}
+	}
+	
+	}
+}
+
+// 2 nd Answer
+package New;
+import java.util.Scanner;
+class Emp1{
+    String name;
+    int id;
+    int age;
+    
+    Emp1(String name, int id, int age) {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
+    
+    void display() {
+        System.out.println("Employee ID: " + id);
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee Age: " + age);
+        System.out.println("");
+    }
+}
+
+public class EmpArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Emp1[] employee = new Emp1[5];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Enter Employee Details " +(i+1)+ ":");
+            System.out.print("Enter the Employee ID : ");
+            int id = sc.nextInt();
+            System.out.print("Enter the Employee Name : ");
+            String name = sc.nextLine();
+            sc.nextLine();
+            System.out.print("Enter the Employee Age: ");
+            int age=sc.nextInt();
+            employee[i]=new Emp1(name,id,age);
+        }
+
+        System.out.println("Employee Details :");
+        for (int i = 0; i < 5; i++) {
+            employee[i].display();
+        }
+    }
+}
+
