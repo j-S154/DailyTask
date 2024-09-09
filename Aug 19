@@ -1,0 +1,43 @@
+// 1 st Question
+package New;
+import java.util.*;
+public class ExcepNumb {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value : ");
+	String b=sc.nextLine();
+	try {
+		Integer.parseInt(b);
+		System.out.println("Valid number : "+b);
+	}
+	catch(NumberFormatException e) {
+		System.out.println(e);
+	}
+}
+}
+
+//2 nd Question
+package New;
+import java.util.*;
+public class RangingExcep {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a;
+	System.out.println("Enter the number:");
+	try {
+		a=sc.nextInt();
+		sc.close();
+		if(a>100 || a<0) {
+			System.out.println("Invalid Number");
+		}
+		else {
+			throw new Exception("Valid Number");
+		}
+	}
+	catch(Exception e) {
+		System.out.println(e);
+
+	}
+	
+}
+}
