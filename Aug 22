@@ -1,0 +1,71 @@
+// 1 st Answer
+package New;
+import java.util.Scanner;
+public class ArrayDesc {
+	public static void main(String[] args) {
+	int  n,temp;
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the length :");
+	n=s.nextInt();
+    int array[]=new int[n];
+    System.out.println("Enter the elements: ");   
+for(int i=0;i<array.length;i++) {
+  array[i]=s.nextInt();
+}
+s.close();
+System.out.println("");
+for(int i=0;i<array.length;i++) {
+	for(int j=i+1;j<array.length;j++) {
+	if(array[i] < array[j]) {
+		temp=array[i];
+		array[i]=array[j];
+		array[j]=temp;
+	}
+}
+}
+System.out.println("Descending Array :");
+for(int i=0;i<array.length;i++) {
+	System.out.print(array[i]+" ");
+}
+}
+}
+
+// 2 Answer
+package New;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+public class ArrayOddIndex {
+static void printOddIndexedEven(int[] arr) {
+	int i=0;
+	System.out.println("OddIndexedEvenElements :");
+	for(i=0;i<arr.length;i++) {
+		if(i%2!=0 && arr[i]%2==0) {
+			System.out.println(arr[i]+" ");
+		}
+	}
+}
+public static void main(String[] args) {
+	BufferedReader b=new BufferedReader(new InputStreamReader(System.in));
+	int size;
+	System.out.println("Enter the  Size of array :");
+	try {
+		size=Integer.parseInt(b.readLine());
+	}
+	catch(Exception e) {
+		System.out.println("invalid Input");
+		return;
+	}
+	int[] arr=new int[size];
+	System.out.println("Enter the Elemets");
+	int i;
+	for(i=0;i<arr.length;i++) {
+		try {
+			arr[i]=Integer.parseInt(b.readLine());
+		}
+		catch(Exception e) {
+			System.out.println("Error");
+		}
+	}
+	printOddIndexedEven(arr);
+}
+}
