@@ -1,0 +1,37 @@
+// 1 st Question
+package New;
+class InvalidException extends Exception{
+	public InvalidException(String str) {
+		//calling the constructor of parent Exception
+		super(str);
+	}
+}
+public class CollegeException {
+static void validate(int age,int mark,String Course) throws InvalidException {
+	if(age<18) {
+		throw new InvalidException("Eligible age should greater than 18");
+	}
+	if(mark<600) {
+		throw new InvalidException("Marks should be greater than 600");
+	}
+	if (!Course.equals("Computer Science")) {
+		throw new InvalidException("Computer science is the eligible for admission");
+	}
+	System.out.println("Eligible to admission in a college ");
+	}
+public static void main(String[] args) {
+		try {
+			//calling the method
+			validate(19,700,"Computer Science");
+			
+			validate(16,700,"Computer Science");
+		}
+		catch(InvalidException ex) {
+			System.out.println(ex.getMessage());
+		}
+		catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
+}
+
